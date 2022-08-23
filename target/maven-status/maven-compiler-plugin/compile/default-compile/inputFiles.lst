@@ -1,8 +1,6 @@
 /Users/edgarhuaranga/Projects/FlinkCEP/frauddetection2/src/main/java/filtrotemperatura/TemperatureDetectionJob.java
 /Users/edgarhuaranga/Projects/FlinkCEP/frauddetection2/src/main/java/filtrotemperatura/Alerta.java
 /Users/edgarhuaranga/Projects/FlinkCEP/frauddetection2/src/main/java/filtrotemperatura/TemperatureDetector.java
-/Users/edgarhuaranga/Projects/FlinkCEP/frauddetection2/src/main/java/spendreport/FraudDetector.java
-/Users/edgarhuaranga/Projects/FlinkCEP/frauddetection2/src/main/java/spendreport/FraudDetectionJob.java
 /Users/edgarhuaranga/Projects/FlinkCEP/frauddetection2/src/main/java/filtrotemperatura/TemperatureIterator.java
 /Users/edgarhuaranga/Projects/FlinkCEP/frauddetection2/src/main/java/filtrotemperatura/TemperatureSource.java
 /Users/edgarhuaranga/Projects/FlinkCEP/frauddetection2/src/main/java/filtrotemperatura/AlertaSink.java

@@ -27,7 +27,7 @@ public class TemperatureSource extends FromIteratorFunction<Temperature> {
 
         public T next() {
             try {
-                Thread.sleep(100L);
+                Thread.sleep(1000L);
             } catch (InterruptedException var2) {
                 throw new RuntimeException(var2);
             }

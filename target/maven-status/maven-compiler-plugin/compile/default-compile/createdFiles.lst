@@ -1,9 +1,7 @@
 filtrotemperatura/TemperatureSource.class
 filtrotemperatura/Temperature.class
 filtrotemperatura/TemperatureIterator.class
-spendreport/FraudDetectionJob.class
 filtrotemperatura/TemperatureSource$RateLimitedIterator.class
-spendreport/FraudDetector.class
 filtrotemperatura/TemperatureDetectionJob.class
 filtrotemperatura/Alerta.class
 filtrotemperatura/AlertaSink.class

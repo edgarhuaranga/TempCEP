@@ -1,8 +1,5 @@
 package filtrotemperatura;
 
-
-
-
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Arrays;
@@ -12,61 +9,60 @@ import java.util.List;
 public class TemperatureIterator implements Iterator<Temperature>, Serializable {
     private static final long serialVersionUID = 1L;
     private static final Timestamp INITIAL_TIMESTAMP = Timestamp.valueOf("2019-01-01 00:00:00");
-    private static final long SIX_MINUTES = 360000L;
     private final boolean bounded;
     private int index = 0;
     private long timestamp;
     private static List<Temperature> data = Arrays.asList(
             new Temperature(1L, 0L, 18.23),
-            new Temperature(2L, 0L, 374.79),
-            new Temperature(3L, 0L, 112.15),
-            new Temperature(4L, 0L, 478.75),
-            new Temperature(5L, 0L, 208.85),
-            new Temperature(1L, 0L, 379.64),
-            new Temperature(2L, 0L, 351.44),
-            new Temperature(3L, 0L, 320.75),
-            new Temperature(4L, 0L, 259.42),
-            new Temperature(5L, 0L, 273.44),
-            new Temperature(1L, 0L, 267.25),
-            new Temperature(2L, 0L, 397.15),
+            new Temperature(2L, 0L, 37.79),
+            new Temperature(3L, 0L, 11.15),
+            new Temperature(4L, 0L, 47.75),
+            new Temperature(5L, 0L, 20.85),
+            new Temperature(1L, 0L, 37.64),
+            new Temperature(2L, 0L, 35.44),
+            new Temperature(3L, 0L, 32.75),
+            new Temperature(4L, 0L, 25.42),
+            new Temperature(5L, 0L, 27.44),
+            new Temperature(1L, 0L, 26.25),
+            new Temperature(2L, 0L, 39.15),
             new Temperature(3L, 0L, 0.219),
-            new Temperature(4L, 0L, 231.94),
-            new Temperature(5L, 0L, 384.73),
-            new Temperature(1L, 0L, 419.62),
-            new Temperature(2L, 0L, 412.91),
+            new Temperature(4L, 0L, 23.94),
+            new Temperature(5L, 0L, 38.73),
+            new Temperature(1L, 0L, 41.62),
+            new Temperature(2L, 0L, 41.91),
             new Temperature(3L, 0L, 0.77),
             new Temperature(4L, 0L, 22.1),
-            new Temperature(5L, 0L, 377.54),
-            new Temperature(1L, 0L, 375.44),
-            new Temperature(2L, 0L, 230.18),
+            new Temperature(5L, 0L, 37.54),
+            new Temperature(1L, 0L, 37.44),
+            new Temperature(2L, 0L, 23.18),
             new Temperature(3L, 0L, 0.8),
-            new Temperature(4L, 0L, 350.89),
-            new Temperature(5L, 0L, 127.55),
-            new Temperature(1L, 0L, 483.91),
-            new Temperature(2L, 0L, 228.22),
-            new Temperature(3L, 0L, 871.15),
+            new Temperature(4L, 0L, 35.89),
+            new Temperature(5L, 0L, 12.55),
+            new Temperature(1L, 0L, 48.91),
+            new Temperature(2L, 0L, 22.22),
+            new Temperature(3L, 0L, 87.15),
             new Temperature(4L, 0L, 64.19),
             new Temperature(5L, 0L, 79.43),
             new Temperature(1L, 0L, 56.12),
-            new Temperature(2L, 0L, 256.48),
-            new Temperature(3L, 0L, 148.16),
-            new Temperature(4L, 0L, 199.95),
-            new Temperature(5L, 0L, 252.37),
-            new Temperature(1L, 0L, 274.73),
-            new Temperature(2L, 0L, 473.54),
-            new Temperature(3L, 0L, 119.92),
-            new Temperature(4L, 0L, 323.59),
-            new Temperature(5L, 0L, 353.16),
-            new Temperature(1L, 0L, 211.9),
-            new Temperature(2L, 0L, 280.93),
-            new Temperature(3L, 0L, 347.89),
-            new Temperature(4L, 0L, 459.86),
+            new Temperature(2L, 0L, 25.48),
+            new Temperature(3L, 0L, 14.16),
+            new Temperature(4L, 0L, 19.95),
+            new Temperature(5L, 0L, 25.37),
+            new Temperature(1L, 0L, 27.73),
+            new Temperature(2L, 0L, 47.54),
+            new Temperature(3L, 0L, 11.92),
+            new Temperature(4L, 0L, 32.59),
+            new Temperature(5L, 0L, 35.16),
+            new Temperature(1L, 0L, 21.9),
+            new Temperature(2L, 0L, 28.93),
+            new Temperature(3L, 0L, 34.89),
+            new Temperature(4L, 0L, 45.86),
             new Temperature(5L, 0L, 82.31),
-            new Temperature(1L, 0L, 373.26),
-            new Temperature(2L, 0L, 479.83),
-            new Temperature(3L, 0L, 454.25),
+            new Temperature(1L, 0L, 37.26),
+            new Temperature(2L, 0L, 47.83),
+            new Temperature(3L, 0L, 45.25),
             new Temperature(4L, 0L, 83.64),
-            new Temperature(5L, 0L, 292.44));
+            new Temperature(5L, 0L, 29.44));
 
     static TemperatureIterator bounded() {
         return new TemperatureIterator(true);
