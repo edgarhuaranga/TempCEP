@@ -22,23 +22,7 @@ import static org.apache.flink.cep.pattern.Pattern.begin;
 public class TemperatureDetectionJob {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        /*  DataStream<Temperature> transactions = env
-                .addSource(new TemperatureSource())
-                .name("datos");
-         */
         DataStream<String> data = env.socketTextStream("127.0.0.1", 9999);
-        /*DataStream<Temperature> transactions = data.map(new MapFunction<String, Temperature>() {
-            @Override
-            public Temperature map(String s) throws Exception {
-                System.out.println(s);
-                String[] data = s.split(",");
-                long id = Long.parseLong(data[0]);
-                long timestamp = Long.parseLong(data[1]);
-                double value = Double.parseDouble(data[2]);
-                return new Temperature(id, timestamp, value);
-            }
-        });*/
-
         DataStream<GeneralEvent> input = data.map(new MapFunction<String, GeneralEvent>() {
             @Override
             public GeneralEvent map(String s) throws Exception {
@@ -68,7 +52,7 @@ public class TemperatureDetectionJob {
                 }
         );
 
-        PatternStream<GeneralEvent> patternStream = CEP.pattern(input, pattern).inProcessingTime();;
+        PatternStream<GeneralEvent> patternStream = CEP.pattern(input, pattern).inProcessingTime();
 
         DataStream<Alerta> alerts = patternStream.select(new PatternSelectFunction<GeneralEvent, Alerta>() {
             @Override
@@ -88,6 +72,7 @@ public class TemperatureDetectionJob {
                         alert.setDescription(evento.getValue()+" ....");
                     }
                 }
+                System.out.println("*--------------------------------*");
                 return alert;
             }
         });
